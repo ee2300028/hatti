@@ -18,20 +18,17 @@
             <a-asset-item id="obj" src="obj/13041_Beagle_v1_L1.obj"></a-asset-item>   <!-- objファイル -->
             <a-asset-item id="mtl" src="obj/13041_Beagle_v1_L1.mtl"></a-asset-item>   <!-- mtlファイル -->
         </a-assets>
-
+   <a-text value="チップだよ"></a-text>
       <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
       <a-marker preset="hiro">
       <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-      <a-text value="チップだよ"></a-text>
-      <a-obj-model
+       
+       <a-obj-model
           src="#obj"
           mtl="#mtl"
           scale="0.015 0.015 0.015"
           position="0 0.5 0"
-                   
-         
-      </a-obj-model> 
-      
+       </a-obj-model> 
       </a-marker>
 
       <!-- AR用のカメラを置く -->
