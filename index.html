@@ -16,18 +16,19 @@
             <a-asset-item id="mtl" src="obj/13041_Beagle_v1_L1.mtl"></a-asset-item>   <!-- mtlファイル -->
         </a-assets>
       
-      <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
-      <a-marker preset="hiro">
-      <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-       <a-obj-model
+
+   <!-- 作成したマーカーでのソース -->
+  <a-marker type='pattern' url='pattern-50.patt'>
+        <a-obj-model
           src="#obj"
           mtl="#mtl"
           scale="0.060 0.060 0.060"
           position="0 0.5 0"
           rotation="-90 30 0"  <!-- X回転 ｙ回転　ｚ回転-->
        </a-obj-model> 
-      </a-marker>
-
+  </a-marker> 
+    
+    
       <!-- AR用のカメラを置く -->
       <a-entity camera></a-entity>
 
