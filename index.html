@@ -13,16 +13,15 @@
 
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIは非表示） -->
     <a-scene embedded arjs="debugUIEnabled:false;">
-
         <!-- OBJ形式のCGモデルの読み込み -->
         <a-assets>
             <a-asset-item id="obj" src="obj/13041_Beagle_v1_L1.obj"></a-asset-item>   <!-- objファイル -->
             <a-asset-item id="mtl" src="obj/13041_Beagle_v1_L1.mtl"></a-asset-item>   <!-- mtlファイル -->
         </a-assets>
+      
       <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
       <a-marker preset="hiro">
       <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-       
        <a-obj-model
           src="#obj"
           mtl="#mtl"
@@ -33,7 +32,7 @@
       </a-marker>
 
       <!-- AR用のカメラを置く -->
-      <!--<a-entity camera></a-entity>-->
+      <a-entity camera></a-entity>
 
     </a-scene>
   </body>
