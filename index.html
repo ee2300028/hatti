@@ -1,39 +1,47 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>A-ARtippu</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style="margin:0px; overflow:hidden;">
-    <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIは非表示） -->
-    <a-scene embedded arjs="debugUIEnabled:false;">
-        <!-- OBJ形式のCGモデルの読み込み -->
-        <a-assets>
-            <a-asset-item id="obj" src="obj/13041_Beagle_v1_L1.obj"></a-asset-item>   <!-- objファイル -->
-            <a-asset-item id="mtl" src="obj/13041_Beagle_v1_L1.mtl"></a-asset-item>   <!-- mtlファイル -->
-        </a-assets>
-      
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- A-Frame ライブラリの読み込み -->
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<!-- AR.js ライブラリの読み込み -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<title>3Dpoti</title>
+</head>
+<body style='margin:0px; overflow:hidden;'>
+
+<a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
+
+ <a-assets>
+
+   <a-asset-item id="model" src="potipa.glb"></a-asset-item>
+   <img id="siba" src="siba.png">
+
+
+ </a-assets>
+ 
+
+
   <!-- 作成したマーカーでのソース -->
   <a-marker type='pattern' url='pattern-50.patt'>
-    
-    
+<a-entity>
+  <a-image src="#siba" position="0 5 0.5" rotation="0 0 0" scale="2 2 2">
+</a-entity>
+
+  <a-entity gltf-model="#model" play-all-model-animations="" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true">
+  </a-entity>
+
  
- 　<a-obj-model
-          src="#obj"
-          mtl="#mtl"
-          scale="0.060 0.060 0.060"
-          position="0 0.5 0"
-          rotation="-90 30 0"  <!-- X回転 ｙ回転　ｚ回転-->
-　</a-obj-model>
+
+
+
+
   </a-marker>
 
 
-      <!-- AR用のカメラを置く -->
-      <a-entity camera></a-entity>
 
-    </a-scene>
-  </body>
+
+
+  <a-entity camera></a-entity>
+</a-scene>
+</body>
 </html>
