@@ -5,6 +5,8 @@
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <!-- AR.js ライブラリの読み込み -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<!-- glTFに含まれたアニメーションを再生するためにaframe-extrasをロード -->
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
 <title>3Dpoti</title>
 </head>
 <body style='margin:0px; overflow:hidden;'>
@@ -12,7 +14,7 @@
 <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
 
  <a-assets>
-
+   <!-- 3Dモデルをプリロード -->
    <a-asset-item id="model" src="potipa.glb"></a-asset-item>
    <img id="siba" src="siba.png">
 
@@ -22,12 +24,15 @@
 
 
   <!-- 作成したマーカーでのソース -->
-  <a-marker type='pattern' url='pattern-50.patt'>
+  <a-marker type='pattern' url='pattern-qr.patt'>
+
+
 <a-entity>
   <a-image src="#siba" position="0 5 0.5" rotation="0 0 0" scale="2 2 2">
 </a-entity>
 
-  <a-entity gltf-model="#model" play-all-model-animations="" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true">
+<!-- idを指定して3Dモデルを表示 -->
+  <a-entity gltf-model="#model" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true">
   </a-entity>
 
  
