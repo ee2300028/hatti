@@ -25,6 +25,7 @@
   <a-marker type='pattern' url='pattern-htti_qr.patt'>
 	 <!-- idを指定して画像を表示 -->
   　	<a-image src="#siba" position="0 5 0.5" rotation="0 0 0" scale="2 2 2">
+	</a-entity>
 　	<!-- idを指定して3Dモデルを表示 -->
   　	<a-entity gltf-model="#model" animation-mixer position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5" visible="true">
   　	</a-entity>
@@ -33,12 +34,14 @@
   <!--2 作成したマーカーでのソース -->
   <a-marker type='pattern' url='pattern-50.patt'>
 　	<a-entity gltf-model="#model2" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true">
+	</a-entity>	
   </a-marker>   
    
   <!--3 作成したマーカーでのソース -->
   <a-marker type='pattern' url='pattern-potipa.patt'>
 　	<a-entity gltf-model="#model2" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true">
- 　</a-marker>     
+	</a-entity>
+ </a-marker>     
    
   <a-entity camera></a-entity>
 </a-scene>
