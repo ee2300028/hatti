@@ -20,27 +20,33 @@
 
  <a-assets>
    <!-- 3Dモデルをプリロード -->
-   <a-asset-item id="model" src="potipa_jump.glb"></a-asset-item>
-   <a-asset-item id="model2" src="potipa.glb"></a-asset-item>
-   <img id="siba" src="siba.png">
+   <a-asset-item id="model1" src="potipa_panch.glb"></a-asset-item>
+   <a-asset-item id="model2" src="potipa_walk.glb"></a-asset-item>
+   <a-asset-item id="model3" src="potipa_jump.glb"></a-asset-item>
+   <a-asset-item id="model4" src="potipa_byebye.glb"></a-asset-item>
  </a-assets>
  
-  <!-- 作成したマーカーでのソース -->
+  <!-- 作成したマーカーでのソース potipa_panch.glb-->
   <a-marker type='pattern' url='pattern-htti_qr.patt'>
      <a-image src="#siba" position="0 5 0.5" rotation="0 0 0" scale="2 2 2"></a-image>
 　	<!-- idを指定して3Dモデルを表示 -->
-  　	<a-entity gltf-model="#model" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+  　	<a-entity gltf-model="#model1" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
   </a-marker>
    
-  <!--2 作成したマーカーでのソース -->
+  <!--2 作成したマーカーでのソース potipa_walk.glb-->
   <a-marker type='pattern' url='pattern-50.patt'>
 　	  <a-entity gltf-model="#model2" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>	
   </a-marker>   
    
-  <!--3 作成したマーカーでのソース -->
+  <!--3 作成したマーカーでのソース potipa_jump.glb-->
   <a-marker type='pattern' url='pattern-potipa.patt'>
-　	 <a-entity gltf-model="#model2" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
- </a-marker>     
+　	 <a-entity gltf-model="#model3" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+ </a-marker>
+ 
+   <!--4 作成したマーカーでのソース potipa_byebye.glb-->
+  <a-marker type='pattern' url='pattern-restart.patt'>
+　	 <a-entity gltf-model="#model4" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+ </a-marker> 
    <a-entity camera look-controls></a-entity>
    <!--<a-entity camera></a-entity>-->
 </a-scene>
