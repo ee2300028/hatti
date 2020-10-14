@@ -38,7 +38,7 @@
    
   <!--2 作成したマーカーでのソース potipa_walk.glb-->
   <a-marker type='pattern' url='pattern-50.patt'>
-     <a-video src="#ca-video" width="3.6" height="2.4" position="0 5 0.5" rotation="270 0 0" play="true"></a-video>
+     <!--<a-video src="#ca-video" width="3.6" height="2.4" position="0 5 0.5" rotation="270 0 0" play="true"></a-video>-->
 　	  <a-entity gltf-model="#model2" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>	
   </a-marker>   
    
@@ -55,12 +55,12 @@
    <a-entity camera look-controls></a-entity>
    <!--<a-entity camera></a-entity>-->
 </a-scene>
- <script>
+ <!--<script>
       window.addEventListener('click', function () {
       var v = document.querySelector('#ar-video');
       v.play();
       });
-    </script>
+    </script>-->
     <script>	  
       window.addEventListener('click', function () {
       var w = document.querySelector('#ca-video');
