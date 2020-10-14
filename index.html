@@ -20,11 +20,13 @@
 
  <a-assets>
    <img id="siba" src="siba.png">
+   <video id="ca-video" muted="true" src="https://www.akt.co.jp/nenga2021/ad01.mp4"</video>
    <!-- 3Dモデルをプリロード -->
    <a-asset-item id="model1" src="potipa_panch.glb"></a-asset-item>
    <a-asset-item id="model2" src="potipa_walk.glb"></a-asset-item>
    <a-asset-item id="model3" src="potipa_jump.glb"></a-asset-item>
    <a-asset-item id="model4" src="potipa_byebye.glb"></a-asset-item>
+  
  </a-assets>
  
   <!-- 作成したマーカーでのソース potipa_panch.glb-->
@@ -36,12 +38,14 @@
    
   <!--2 作成したマーカーでのソース potipa_walk.glb-->
   <a-marker type='pattern' url='pattern-50.patt'>
+     <a-video src="#ca-video" width="3.6" height="2.4" position="0 5 0.5" rotation="270 0 0" play="true"></a-video>
 　	  <a-entity gltf-model="#model2" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>	
   </a-marker>   
    
   <!--3 作成したマーカーでのソース potipa_jump.glb-->
   <a-marker type='pattern' url='pattern-akt.patt'>
 　	 <a-entity gltf-model="#model3" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+   
  </a-marker>
  
    <!--4 作成したマーカーでのソース potipa_byebye.glb-->
@@ -51,5 +55,18 @@
    <a-entity camera look-controls></a-entity>
    <!--<a-entity camera></a-entity>-->
 </a-scene>
+ <script>
+      window.addEventListener('click', function () {
+      var v = document.querySelector('#ar-video');
+      v.play();
+      });
+    </script>
+    <script>	  
+      window.addEventListener('click', function () {
+      var w = document.querySelector('#ca-video');
+      w.play();
+      });
+    </script>
+ 
 </body>
 </html>
