@@ -26,6 +26,7 @@
    <a-asset-item id="model2" src="potipa_walk.glb"></a-asset-item>
    <a-asset-item id="model3" src="potipa_jump.glb"></a-asset-item>
    <a-asset-item id="model4" src="potipa_byebye.glb"></a-asset-item>
+   <a-asset-item id="model5" src="pattern-gyu"></a-asset-item>
   
  </a-assets>
  
@@ -51,7 +52,17 @@
    <!--4 作成したマーカーでのソース potipa_byebye.glb-->
   <a-marker type='pattern' url='pattern-restart.patt'>
 　	 <a-entity gltf-model="#model4" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
- </a-marker> 
+ </a-marker>
+ 
+ <!--5 作成したマーカーでのソース potipa_jump.glb-->
+  <a-marker type='pattern' url='pattern-gyu.patt'>
+　	 <a-entity gltf-model="#model3" animation-mixer position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+   
+ </a-marker>
+ 
+ 
+ 
+ 
    <a-entity camera look-controls></a-entity>
    <!--<a-entity camera></a-entity>-->
 </a-scene>
